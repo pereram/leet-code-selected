@@ -23,14 +23,14 @@ it doesn’t exist, it is -1.
 
 
 def nextGreater(lst):
-    grt=[]
+    grt=[]  # creating an array for greater elements for each index
     size=len(lst)
-    for i,val in enumerate(lst):
-        
-        next=-1
-        temp=i
-        while (temp<size):
-            if lst[temp]>val:
+    for i,val in enumerate(lst): # get the both value and index. Index is needed to 
+                                # iterate through rest of the array.
+        next=-1  # when the element has no greater value. use it as default
+        temp=i   # current index as temp
+        while (temp<size):   
+            if lst[temp]>val: # check for a greater value in remainder of list
                 next=lst[temp]
                 break
             temp+=1
